@@ -1,6 +1,6 @@
 ## Contact Records Text Mining with GenAI
 
-This repository contains a Python script designed to retrieve key information from contact data using the GenAI API. The script focuses on extracting essential details such as customer numbers and names (structured data) from textual descriptions (unstructured data). The techniques used includes OpenAI API, NLP, Text Parsing, Fewshot Templates.  
+This repository contains a Python script designed to retrieve key information from contact data using the GenAI API. The script focuses on extracting essential details such as customer numbers and names (structured data) from textual descriptions (unstructured data). The techniques used includes OpenAI API, NLP, Text Parsing, Fewshot Templates. Noted that 2 fewshot templates work better than 1 fewshot template here. Model used here is "gpt-3.5-turbo". 
 
 ### Features
 - Extracts key information (customer numbers, names, etc.) from textual data.
