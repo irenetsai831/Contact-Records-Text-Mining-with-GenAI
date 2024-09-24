@@ -8,8 +8,7 @@ chat = ChatOpenAI(
     model="gpt-3.5-turbo",
     openai_api_base=os.environ['CHATGPT_API_ENDPOINT'],
     openai_api_key=os.environ['OPENAI_API_KEY'],
-    temperature=0.1, 
-    http_client=client  # Pass the custom session here
+    temperature=0.1
 )
 
 # Create the First FewShotPromptTemplate
