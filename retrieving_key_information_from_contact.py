@@ -89,23 +89,19 @@ def create_second_few_shot_template():
 
     return few_shot_prompt_template
 
-# reording which row they are
-row_process_total = 0
-row_process_unit = 1
-
-# Create both few-shot templates
-first_template = create_few_shot_prompt_template()
-second_template = create_second_few_shot_template()
-
 # Function to classify the main contact with two steps
 def classify_bfno_name(text):
 
-    # Recording which we are using
-    global row_process_total
-    global row_process_unit
+    # reording which row they are
+    row_process_total = 0
+    row_process_unit = 1
     row_process_total += row_process_unit
     print(f"目前已經進行到第{row_process_total}行")
-
+    
+    # Create both few-shot templates
+    first_template = create_few_shot_prompt_template()
+    second_template = create_second_few_shot_template()
+    
     # Use text as input, which extracts both "Customer_No" and "Name"
     frist_prompt = first_template.format(input=text)
     frist_output = chat.invoke(frist_prompt).content.strip() 
