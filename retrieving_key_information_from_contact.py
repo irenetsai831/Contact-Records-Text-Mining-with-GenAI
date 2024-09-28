@@ -16,8 +16,8 @@ def create_few_shot_prompt_template():
 
     examples = [
         {"input": "家庭戶 10629 47915 145064", "output": "10629, 47915, 145064"},
-        {"input": "家庭戶 張O睿 張O碩 許O莉", "output": "NA"},
-        {"input": "家庭戶徐O菊325888  邱O雄2072 324895 邱O慈", "output": "325888, 2072, 324895"}, 
+        {"input": "家庭戶 王O強 12345 李O華", "output": "12345"},
+        {"input": "家庭戶 張O明 王O芳 陳O偉", "output": "NA"},
     ]
 
     prefix = """
@@ -54,9 +54,9 @@ def create_few_shot_prompt_template():
 def create_second_few_shot_template():
 
     examples = [
-        {"input": "家庭戶 徐O菊325049 邱O雄2072 324895 邱O慈", "output": "徐O菊, 邱O雄, 邱O慈"}, 
-        {"input": "家庭戶 張O睿 張O碩 許O敏", "output": "張O睿, 張O碩, 許O敏"},
         {"input": "家庭戶 10629 47915 145064", "output": "NA"},
+        {"input": "家庭戶 王O強 12345 李O華", "output": "王O強, 李O華"},
+        {"input": "家庭戶 張O明 王O芳 陳O偉", "output": "張O明, 王O芳, 陳O偉"},
     ]
   
     prefix = """
